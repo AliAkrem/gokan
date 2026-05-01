@@ -31,11 +31,6 @@ Gokan is a backend chat service that provides real-time messaging capabilities t
 - **Authentication**: JWT-based with support for JWKS
 - **WebSocket**: Real-time bidirectional communication
 
-## Prerequisites
-
-- Go 1.25 or higher
-- Docker and Docker Compose (for MongoDB and Redis)
-- Node.js 18+ and npm/yarn (for frontend example)
 
 ## Installation
 
