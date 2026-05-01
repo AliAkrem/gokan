@@ -135,18 +135,6 @@ yarn install
 cp .env.example .env
 ```
 
-Edit `apps/front-end/.env`:
-
-```env
-# Supabase Configuration
-VITE_SUPABASE_URL=your_supabase_url_here
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key_here
-
-# Chat Backend API Configuration
-VITE_CHAT_API_URL=http://localhost:8080
-VITE_CHAT_WS_URL=localhost:8080
-```
-
 4. Run the development server:
 
 ```bash
