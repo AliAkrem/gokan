@@ -1,0 +1,66 @@
+.message-bubble {
+  display: flex;
+  flex-direction: column;
+  max-width: 65%;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.25rem;
+  word-wrap: break-word;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.message-bubble.own {
+  align-self: flex-end;
+  background-color: #0084ff;
+  color: white;
+  border-radius: 18px 18px 4px 18px;
+}
+
+.message-bubble.other {
+  align-self: flex-start;
+  background-color: #3a3b3c;
+  color: #e4e6eb;
+  border-radius: 18px 18px 18px 4px;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.message-text {
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.message-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  margin-top: 0.125rem;
+}
+
+.message-timestamp {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.status-icon-group {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  margin-left: 0.25rem;
+}
+
+.status-icon {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.status-icon-offset {
+  margin-left: -0.5rem;
+}
+
+.status-icon-group.status-read .status-icon {
+  color: #4fc3f7;
+}
