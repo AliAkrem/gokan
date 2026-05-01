@@ -6,6 +6,10 @@ A headless real-time chat application built with Go, designed to manage message 
 
 Gokan is a backend chat service that provides real-time messaging capabilities through WebSockets, with a REST API for managing users, rooms, and messages. It's designed to be headless, meaning it can be integrated with any application.
 
+[Screencast from 2026-05-01 23-41-28.webm](https://github.com/user-attachments/assets/99796ac5-32d5-46f2-bbc9-6d6859d90fca)
+
+
+
 ## Features
 
 - **Real-time Messaging**: WebSocket-based communication for instant message delivery
@@ -170,13 +174,6 @@ yarn dev
 | `LOG_LEVEL` | Logging level | `info` | No |
 
 \* Either `JWT_SECRET` or `JWKS_URL` is required
-
-
-### WebSocket Connection Issues
-
-1. Ensure you have a valid JWT token
-2. Generate a WebSocket ticket via `POST /api/v1/tickets`
-3. Use the ticket to connect to `/ws?ticket=<your_ticket>`
 
 
 ## Support
