@@ -22,7 +22,7 @@ jobs:
 
       - name: Build
         run: |
-          go build -v -ldflags "-X main.Version=${{ steps.version.outputs.version }}" -o gokan .
+          CGO_ENABLED=0 go build -v -ldflags "-X main.Version=${{ steps.version.outputs.version }}" -o gokan .
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
