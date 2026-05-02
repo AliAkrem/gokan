@@ -3,31 +3,30 @@ on:
   workflow_dispatch:
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Set up Go
-      uses: actions/setup-go@v4
-      with:
-        go-version: '1.23.0'
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: "1.23.0"
 
-    - name: Set version
-      id: version
-      run: |
-        VERSION="v0.1.0-beta"
-        echo "version=$VERSION" >> $GITHUB_OUTPUT
-        echo "Building version: $VERSION"
+      - name: Set version
+        id: version
+        run: |
+          VERSION="v0.1.0-beta"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Building version: $VERSION"
 
-    - name: Build
-      run: |
-        go build -v -ldflags "-X main.Version=${{ steps.version.outputs.version }}" -o gokan ./...
+      - name: Build
+        run: |
+          go build -v -ldflags "-X main.Version=${{ steps.version.outputs.version }}" -o gokan .
 
-    - name: Upload build artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: gokan-${{ steps.version.outputs.version }}
-        path: gokan
-        retention-days: 30
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gokan-${{ steps.version.outputs.version }}
+          path: gokan
+          retention-days: 30
