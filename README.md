@@ -26,10 +26,6 @@ Most chat services lock you into their infrastructure, their pricing, and their 
 
 ---
 
-[Screencast from 2026-05-01 23-41-28.webm](https://github.com/user-attachments/assets/99796ac5-32d5-46f2-bbc9-6d6859d90fca)
-
-
-
 ## Features
 
 - **Real-time messaging** — WebSocket-based delivery with Redis Pub/Sub fan-out
