@@ -1,4 +1,4 @@
-# Gokan — Open-Source Headless Chat API for Go
+# Gokan — headless real-time chat application built with Go
 
 > Drop real-time 1-1 messaging into any backend in minutes.  
 > Built with Go. No lock-in. No UI. Just a clean REST + WebSocket API you control.
