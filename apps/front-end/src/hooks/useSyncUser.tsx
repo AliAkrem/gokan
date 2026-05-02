@@ -26,7 +26,7 @@ export function useSyncUser({ jwt, userId }: { jwt: string; userId: string }) {
     };
 
     getCurrentUser();
-  }, [jwt]);
+  }, [jwt, userId]);
 
   return { isLoading, error };
 }

@@ -62,7 +62,7 @@ export function useChatSocket({
   onMessageReadRef.current = onMessageRead;
 
   // Get WebSocket URL from environment
-  const WS_BASE_URL = import.meta.env.VITE_CHAT_WS_URL || "localhost:8080";
+  const WS_BASE_URL = import.meta.env.VITE_CHAT_WS_URL || "ws://localhost:8080/ws";
 
   /**
    * Sends a WebSocket event
@@ -151,7 +151,8 @@ export function useChatSocket({
       const ticket = ticketResponse.ticket;
 
       // Open WebSocket connection
-      const wsUrl = `ws://${WS_BASE_URL}/ws?ticket=${ticket}`;
+      const wsUrl = `${WS_BASE_URL}?ticket=${ticket}`;
+
       const ws = new WebSocket(wsUrl);
       wsRef.current = ws;
 
